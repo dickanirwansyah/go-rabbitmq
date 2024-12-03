@@ -14,4 +14,7 @@ func SetupRoutes(app *fiber.App) {
 	app.Delete("/api/v1/policy/delete/:id", controller.DeletePolicy)
 
 	app.Post("/api/v1/claim/publish", controller.SendPublishClaim)
+
+	app.Post("/api/v1/roles/setting-roles", controller.CreateNewRoles)
+	app.Put("/api/v1/roles/update-setting-roles", controller.UpdateNewRoles)
 }
